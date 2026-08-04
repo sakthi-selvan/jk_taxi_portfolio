@@ -44,7 +44,7 @@ export default function Testimonials() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="section-tag tag-yellow"><Star size={13} /> Testimonials</span>
+          <span className="section-tag"><Star size={13} /> Testimonials</span>
           <h2 className="section-title">Loved by Tiruppur</h2>
           <p className="section-sub">Join thousands of happy riders who trust JK Taxi every day.</p>
         </motion.div>

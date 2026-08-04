@@ -1,103 +1,117 @@
-.svc__header { margin-bottom: 56px; text-align: center; }
+.svc__header {
+  margin-bottom: 56px;
+  max-width: 36rem;
+}
 
-.svc__grid {
+.svc__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.svc__row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
+.svc__row--flip .svc__media { order: 2; }
+.svc__row--flip .svc__copy { order: 1; }
 
-.svc__card {
-  background: #fff;
-  border-radius: 24px;
-  border: 1px solid var(--border);
+.svc__media {
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.3s, transform 0.3s;
+  aspect-ratio: 16 / 11;
+  background: var(--bg-alt);
 }
-.svc__card:hover { box-shadow: var(--shadow-lg); }
-
-.svc__img-wrap {
-  position: relative;
-  height: 220px;
-  overflow: hidden;
-}
-.svc__img {
+.svc__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.55s ease;
+  transition: transform 0.6s ease;
 }
-.svc__card:hover .svc__img { transform: scale(1.05); }
-.svc__img-wrap::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 45%, rgba(11, 18, 32, 0.35) 100%);
-  pointer-events: none;
-}
+.svc__row:hover .svc__media img { transform: scale(1.04); }
 
-.svc__badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  margin: 0;
-  z-index: 1;
-  box-shadow: var(--shadow-sm);
-}
-.svc__price-pill {
-  position: absolute;
-  bottom: 14px;
-  right: 14px;
-  z-index: 1;
-  padding: 7px 14px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: var(--r-full);
-  font-size: 0.82rem;
+.svc__eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
   font-weight: 800;
-  color: var(--violet-deep);
-  box-shadow: var(--shadow-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber-deep);
+  margin-bottom: 10px;
 }
-
-.svc__body { padding: 24px 22px 26px; }
 .svc__title {
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  margin-bottom: 8px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.15;
 }
 .svc__desc {
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
-  line-height: 1.65;
-  margin-bottom: 16px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  max-width: 38ch;
 }
 .svc__features {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 9px;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-bottom: 22px;
 }
 .svc__features li {
+  font-size: 0.88rem;
+  font-weight: 650;
+  color: var(--ink-2);
+  padding-left: 14px;
+  position: relative;
+}
+.svc__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+}
+
+.svc__foot {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.84rem;
-  color: var(--text-secondary);
-  font-weight: 600;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-.svc__dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
+.svc__from {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
 }
-.svc__dot--purple { background: var(--violet-mid); }
-.svc__dot--yellow { background: var(--amber); }
-.svc__dot--blue { background: var(--sky); }
-.svc__dot--green { background: var(--mint); }
+.svc__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 750;
+  color: var(--amber-deep);
+  text-decoration: none;
+  transition: gap 0.2s, color 0.2s;
+}
+.svc__link:hover { gap: 10px; color: var(--ink); }
 
-@media (max-width: 760px) {
-  .svc__grid { grid-template-columns: 1fr; }
+@media (max-width: 800px) {
+  .svc__row,
+  .svc__row--flip {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .svc__row--flip .svc__media,
+  .svc__row--flip .svc__copy { order: initial; }
+  .svc__rows { gap: 48px; }
 }

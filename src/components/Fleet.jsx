@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Users, IndianRupee, Star } from 'lucide-react'
+import { Users, IndianRupee } from 'lucide-react'
 import miniCar from '../assets/mini_car.jpeg'
 import carImage from '../assets/car_image.jpeg'
 import suvErtica from '../assets/suv_ertica.png'
@@ -15,7 +15,6 @@ const vehicles = [
     perKm: 20,
     examples: 'WagonR · Alto · Tiago',
     popular: false,
-    accentClass: 'fleet__accent--green',
   },
   {
     img: carImage,
@@ -26,7 +25,6 @@ const vehicles = [
     perKm: 20,
     examples: 'Dzire · Etios · Aura',
     popular: true,
-    accentClass: 'fleet__accent--purple',
   },
   {
     img: suvErtica,
@@ -37,7 +35,6 @@ const vehicles = [
     perKm: 25,
     examples: 'Ertiga · Innova · Marazzo',
     popular: false,
-    accentClass: 'fleet__accent--blue',
   },
   {
     img: 'https://images.pexels.com/photos/1118448/pexels-photo-1118448.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop',
@@ -48,7 +45,6 @@ const vehicles = [
     perKm: 21,
     examples: 'Bajaj RE · Piaggio Ape',
     popular: false,
-    accentClass: 'fleet__accent--yellow',
   },
   {
     img: 'https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop',
@@ -59,7 +55,6 @@ const vehicles = [
     perKm: 13,
     examples: 'Pulsar · Apache · Activa',
     popular: false,
-    accentClass: 'fleet__accent--blue',
   },
 ]
 
@@ -74,31 +69,29 @@ export default function Fleet() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="section-tag tag-blue"><Star size={13} /> Our Fleet</span>
-          <h2 className="section-title">Choose Your Perfect Ride</h2>
+          <span className="section-tag">Our Fleet</span>
+          <h2 className="section-title">Choose your perfect ride</h2>
           <p className="section-sub">
             Five vehicle types to match every need and budget in Tiruppur.
           </p>
         </motion.div>
+      </div>
 
-        <div className="fleet__grid">
+      <div className="fleet__track-wrap">
+        <div className="fleet__track">
           {vehicles.map((v, i) => (
-            <motion.div
-              key={i}
-              className={`fleet__card ${v.popular ? 'fleet__card--pop' : ''}`}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ delay: i * 0.08, duration: 0.4 }}
-              whileHover={{ y: -5 }}
+            <motion.article
+              key={v.name}
+              className={`fleet__card${v.popular ? ' fleet__card--pop' : ''}`}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.06, duration: 0.4 }}
             >
-              {v.popular && (
-                <div className="fleet__popular-ribbon">Most Popular</div>
-              )}
+              {v.popular && <span className="fleet__badge">Most Popular</span>}
               <div className="fleet__img-wrap">
                 <img src={v.img} alt={v.name} loading="lazy" />
               </div>
-              <div className={`fleet__color-bar ${v.accentClass}`} />
               <div className="fleet__info">
                 <div className="fleet__name-row">
                   <div>
@@ -124,7 +117,7 @@ export default function Fleet() {
                 </div>
                 <p className="fleet__examples">{v.examples}</p>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

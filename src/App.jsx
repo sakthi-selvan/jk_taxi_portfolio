@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import QuickBook from './components/QuickBook'
 import Services from './components/Services'
 import Fleet from './components/Fleet'
 import HowItWorks from './components/HowItWorks'
@@ -15,6 +16,7 @@ function App() {
     <div className="app">
       <Navbar />
       <Hero />
+      <QuickBook />
       <Services />
       <Fleet />
       <HowItWorks />

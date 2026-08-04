@@ -26,7 +26,7 @@ export default function Download() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="section-tag tag-purple" style={{ background: 'rgba(237,233,254,0.15)', color: '#DDD6FE', borderColor: 'rgba(237,233,254,0.2)' }}>
+              <span className="section-tag" style={{ background: 'transparent', color: 'var(--amber)', border: 'none' }}>
                 <Smartphone size={13} /> Get the App
               </span>
               <h2 className="dl__title">

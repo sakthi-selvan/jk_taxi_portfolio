@@ -1,16 +1,20 @@
 .app { width: 100%; overflow-x: hidden; }
 
 .section {
-  padding: 96px 0;
+  padding: 104px 0;
   position: relative;
 }
-.section-white { background: var(--bg-elevated); }
-.section-alt { background: var(--bg); }
-.section-purple { background: linear-gradient(180deg, var(--violet-mist) 0%, var(--bg) 100%); }
-.section-blue { background: linear-gradient(180deg, var(--sky-soft) 0%, var(--bg) 100%); }
+.section-white { background: var(--paper); }
+.section-alt { background: transparent; }
+.section-purple {
+  background: linear-gradient(180deg, #EFF4FF 0%, transparent 100%);
+}
+.section-blue {
+  background: linear-gradient(180deg, var(--sky-soft) 0%, transparent 100%);
+}
 
 .container {
-  max-width: 1160px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -18,51 +22,53 @@
 .section-tag {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 7px 14px;
-  border-radius: var(--r-full);
-  font-size: 0.72rem;
+  gap: 8px;
+  padding: 0;
+  margin-bottom: 14px;
+  border: none;
+  border-radius: 0;
+  background: none;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 16px;
-  border: 1px solid transparent;
-}
-.tag-purple {
-  background: var(--violet-mist);
-  color: var(--violet-deep);
-  border-color: #DDD6FE;
-}
-.tag-blue {
-  background: var(--sky-soft);
-  color: var(--blue-deeper);
-  border-color: #BAE6FD;
-}
-.tag-yellow {
-  background: var(--amber-soft);
   color: var(--amber-deep);
-  border-color: #FDE68A;
 }
+.tag-purple,
+.tag-blue,
+.tag-yellow,
 .tag-green {
-  background: var(--mint-soft);
-  color: #115E59;
-  border-color: #99F6E4;
+  background: none;
+  border: none;
+  color: var(--amber-deep);
 }
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(1.9rem, 4.2vw, 3rem);
-  font-weight: 800;
-  color: var(--text);
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
   margin-bottom: 14px;
+  max-width: 16ch;
 }
 .section-sub {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: var(--text-secondary);
-  max-width: 540px;
+  max-width: 42ch;
   line-height: 1.7;
+  font-weight: 500;
+}
+
+.section-header {
+  margin-bottom: 48px;
+}
+.section-header.center {
+  text-align: center;
+}
+.section-header.center .section-title,
+.section-header.center .section-sub {
   margin-left: auto;
   margin-right: auto;
 }
@@ -73,54 +79,45 @@
   justify-content: center;
   gap: 8px;
   font-weight: 700;
-  border-radius: var(--r-full);
+  border-radius: 999px;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   cursor: pointer;
   font-family: var(--font-sans);
   border: none;
   text-decoration: none;
 }
-.btn-lg { padding: 15px 34px; font-size: 1rem; }
-.btn-md { padding: 12px 26px; font-size: 0.9rem; }
-.btn-sm { padding: 9px 18px; font-size: 0.82rem; }
+.btn-lg { padding: 15px 30px; font-size: 1rem; }
+.btn-md { padding: 12px 22px; font-size: 0.92rem; }
+.btn-sm { padding: 9px 16px; font-size: 0.84rem; }
 
-.btn-purple {
-  background: var(--grad-purple);
-  color: #fff;
-  box-shadow: var(--shadow-glow);
-}
-.btn-purple:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 36px rgba(91, 33, 182, 0.35);
-}
+.btn-purple,
 .btn-blue {
-  background: var(--grad-blue);
+  background: var(--ink);
   color: #fff;
-  box-shadow: var(--shadow-blue);
+  box-shadow: var(--shadow-sm);
 }
+.btn-purple:hover,
 .btn-blue:hover {
   transform: translateY(-2px);
+  background: #1C2230;
 }
 .btn-outline-purple {
   background: transparent;
-  color: var(--violet-deep);
-  border: 1.5px solid var(--violet-mid);
+  color: var(--ink);
+  border: 1.5px solid var(--line);
 }
-.btn-outline-purple:hover { background: var(--violet-mist); }
+.btn-outline-purple:hover { background: var(--paper); }
 .btn-white {
   background: #fff;
-  color: var(--violet-deep);
+  color: var(--ink);
   box-shadow: var(--shadow-md);
-}
-.btn-white:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
 }
 
 @media (max-width: 768px) {
   .section { padding: 72px 0; }
+  body { font-size: 16px; }
 }
 @media (max-width: 480px) {
   .section { padding: 56px 0; }
-  .container { padding: 0 16px; }
+  .container { padding: 0 18px; }
 }

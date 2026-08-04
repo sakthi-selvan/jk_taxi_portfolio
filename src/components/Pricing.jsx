@@ -52,8 +52,8 @@ export default function Pricing() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="section-tag tag-yellow"><IndianRupee size={13} /> Pricing</span>
-          <h2 className="section-title">Clear, Honest Fares</h2>
+          <span className="section-tag"><IndianRupee size={13} /> Pricing</span>
+          <h2 className="section-title">Clear, honest fares</h2>
           <p className="section-sub">
             No surge pricing surprises. No hidden charges. See the exact fare before you book.
           </p>

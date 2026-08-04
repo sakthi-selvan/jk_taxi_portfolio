@@ -4,18 +4,25 @@
   left: 0;
   right: 0;
   z-index: 900;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(16px) saturate(1.2);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.85);
   padding: 0 24px;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
+  border-bottom: 1px solid transparent;
 }
+.nb--solid {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px) saturate(1.2);
+  border-bottom-color: rgba(215, 220, 229, 0.9);
+  box-shadow: 0 8px 28px rgba(18, 21, 28, 0.06);
+}
+
 .nb-inner {
-  max-width: 1160px;
+  max-width: 1120px;
   margin: 0 auto;
-  height: 72px;
+  height: 76px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .nb-logo {
@@ -23,34 +30,40 @@
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
-  height: 52px;
-  transition: transform 0.25s ease;
+  height: 48px;
 }
-.nb-logo:hover { transform: translateY(-1px); }
 .nb-logo-img {
-  height: 52px;
+  height: 48px;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25));
+  transition: filter 0.25s;
 }
+.nb--solid .nb-logo-img { filter: none; }
 
 .nb-links {
   flex: 1;
   display: flex;
   justify-content: center;
-  gap: 4px;
+  gap: 2px;
 }
 .nb-lnk {
-  padding: 9px 14px;
+  padding: 10px 16px;
   border-radius: 999px;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  color: #475569;
+  color: rgba(255, 255, 255, 0.88);
   text-decoration: none;
-  transition: color 0.15s, background 0.15s;
+  transition: color 0.2s, background 0.2s;
 }
 .nb-lnk:hover {
-  color: var(--violet-deep);
-  background: var(--violet-mist);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.nb--solid .nb-lnk { color: var(--text-secondary); }
+.nb--solid .nb-lnk:hover {
+  color: var(--ink);
+  background: var(--mist);
 }
 
 .nb-right {
@@ -62,34 +75,34 @@
 .nb-tel {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 9px 14px;
+  gap: 7px;
+  padding: 10px 14px;
   border-radius: 999px;
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   font-weight: 700;
-  color: #334155;
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  transition: color 0.15s, background 0.15s;
+  transition: background 0.2s, color 0.2s;
 }
-.nb-tel:hover {
-  color: var(--violet-deep);
-  background: var(--violet-mist);
-}
+.nb-tel:hover { background: rgba(255, 255, 255, 0.12); }
+.nb--solid .nb-tel { color: var(--ink-2); }
+.nb--solid .nb-tel:hover { background: var(--mist); color: var(--ink); }
+
 .nb-book {
-  padding: 11px 22px;
+  padding: 12px 22px;
   border-radius: 999px;
-  background: var(--grad-purple);
-  color: #fff;
-  font-size: 0.88rem;
+  background: var(--grad-amber);
+  color: var(--ink);
+  font-size: 0.9rem;
   font-weight: 800;
   text-decoration: none;
   white-space: nowrap;
   box-shadow: var(--shadow-glow);
-  transition: transform 0.18s, box-shadow 0.18s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .nb-book:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 28px rgba(91, 33, 182, 0.35);
+  box-shadow: 0 14px 32px rgba(245, 166, 35, 0.45);
 }
 
 .nb-ham {
@@ -101,23 +114,30 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  border: 1.5px solid #E2E8F0;
-  background: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.1);
   cursor: pointer;
   flex-shrink: 0;
+  backdrop-filter: blur(8px);
+}
+.nb--solid .nb-ham {
+  border-color: var(--line);
+  background: #fff;
 }
 .nb-ham span {
   display: block;
   width: 18px;
   height: 2px;
   border-radius: 2px;
-  background: #334155;
+  background: #fff;
+  transition: background 0.2s;
 }
+.nb--solid .nb-ham span { background: var(--ink); }
 
 .nb-mask {
   position: fixed;
   inset: 0;
-  background: rgba(11, 18, 32, 0.5);
+  background: rgba(18, 21, 28, 0.55);
   backdrop-filter: blur(4px);
   z-index: 940;
 }
@@ -126,52 +146,49 @@
   top: 0;
   right: 0;
   bottom: 0;
-  width: min(320px, 85vw);
+  width: min(320px, 88vw);
   background: #fff;
   z-index: 950;
   display: flex;
   flex-direction: column;
-  box-shadow: -16px 0 48px rgba(15, 23, 42, 0.18);
+  box-shadow: -20px 0 60px rgba(18, 21, 28, 0.2);
 }
 .nb-drawer-hd {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 18px;
-  border-bottom: 1px solid #F1F5F9;
+  border-bottom: 1px solid var(--border-light);
 }
 .nb-drawer-close {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  color: #64748B;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--mist);
+  border: 1px solid var(--line);
+  color: var(--text-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-.nb-drawer-nav { flex: 1; overflow-y: auto; padding: 10px; }
+.nb-drawer-nav { flex: 1; overflow-y: auto; padding: 12px; }
 .nb-drawer-lnk {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px;
-  border-radius: 12px;
-  font-size: 0.98rem;
-  font-weight: 600;
-  color: #334155;
+  padding: 16px 14px;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: var(--ink);
   text-decoration: none;
 }
-.nb-drawer-lnk:hover {
-  background: var(--violet-mist);
-  color: var(--violet-deep);
-}
-.nb-arr { color: #CBD5E1; }
+.nb-drawer-lnk:hover { background: var(--amber-soft); }
+.nb-arr { color: var(--text-muted); }
 .nb-drawer-ft {
-  padding: 16px 18px 24px;
-  border-top: 1px solid #F1F5F9;
+  padding: 16px 18px 28px;
+  border-top: 1px solid var(--border-light);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -181,11 +198,11 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 13px;
-  border-radius: 12px;
-  border: 1.5px solid #DDD6FE;
-  background: var(--violet-mist);
-  color: var(--violet-deep);
+  padding: 14px;
+  border-radius: 14px;
+  border: 1.5px solid var(--line);
+  background: var(--mist);
+  color: var(--ink);
   font-weight: 700;
   text-decoration: none;
 }
@@ -193,17 +210,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
-  border-radius: 12px;
-  background: var(--grad-purple);
-  color: #fff;
+  padding: 15px;
+  border-radius: 14px;
+  background: var(--grad-amber);
+  color: var(--ink);
   font-weight: 800;
   text-decoration: none;
+  box-shadow: var(--shadow-glow);
 }
 .nb-drawer-note {
   text-align: center;
-  font-size: 0.72rem;
-  color: #94A3B8;
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }
 
 @media (max-width: 900px) {
