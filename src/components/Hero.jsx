@@ -35,14 +35,7 @@ export default function Hero() {
           <source src={heroVideo} type="video/mp4" />
         </video>
         {/* Purple gradient overlay — the key visual */}
-        <div className="hr-bg-overlay">
-          {/* Animated floating shapes */}
-          <div className="hr-shape hr-shape-1" />
-          <div className="hr-shape hr-shape-2" />
-          <div className="hr-shape hr-shape-3" />
-          <div className="hr-shape hr-shape-4" />
-          <div className="hr-shape hr-shape-5" />
-        </div>
+        <div className="hr-bg-overlay" />
       </div>
 
       {/* ─── Content wrapper (centres everything) ─── */}

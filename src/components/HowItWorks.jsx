@@ -8,28 +8,28 @@ const steps = [
     num: '1',
     title: 'Download the App',
     desc: 'Install JK Taxi on Android or iOS. Sign up with your phone number and verify with OTP in seconds.',
-    color: '#8B5CF6',
+    color: '#5B21B6',
   },
   {
     icon: <MapPin size={26} />,
     num: '2',
     title: 'Set Your Location',
     desc: 'Enter pickup and drop-off. Choose from Car, Auto, or Bike. See fare before you confirm.',
-    color: '#2196F3',
+    color: '#0284C7',
   },
   {
     icon: <Car size={26} />,
     num: '3',
     title: 'Driver On The Way',
     desc: 'We match you with the nearest driver. Track them live. Share your OTP to start the ride.',
-    color: '#F59E0B',
+    color: '#F5B301',
   },
   {
     icon: <CreditCard size={26} />,
     num: '4',
     title: 'Arrive & Pay',
     desc: 'Reach your destination safely. Pay by Cash, UPI, or Card. Rate your driver in seconds.',
-    color: '#10B981',
+    color: '#0D9488',
   },
 ]
 

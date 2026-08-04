@@ -40,7 +40,7 @@ const vehicles = [
     accentClass: 'fleet__accent--blue',
   },
   {
-    img: 'https://images.pexels.com/photos/20321317/pexels-photo-20321317.jpeg',
+    img: 'https://images.pexels.com/photos/1118448/pexels-photo-1118448.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop',
     name: 'Auto',
     type: 'Auto Rickshaw',
     seats: 3,
@@ -51,7 +51,7 @@ const vehicles = [
     accentClass: 'fleet__accent--yellow',
   },
   {
-    img: 'https://images.pexels.com/photos/30754807/pexels-photo-30754807.jpeg',
+    img: 'https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop',
     name: 'Bike',
     type: 'Two-Wheeler',
     seats: 1,

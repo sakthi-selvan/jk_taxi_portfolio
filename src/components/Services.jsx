@@ -15,7 +15,7 @@ const services = [
     startFrom: '₹100',
   },
   {
-    img: 'https://images.pexels.com/photos/20321317/pexels-photo-20321317.jpeg',
+    img: 'https://images.pexels.com/photos/1118448/pexels-photo-1118448.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
     tag: 'Best Value',
     tagClass: 'tag-yellow',
     title: 'Auto Rickshaw',
@@ -25,7 +25,7 @@ const services = [
     startFrom: '₹80',
   },
   {
-    img: 'https://images.pexels.com/photos/30754807/pexels-photo-30754807.jpeg',
+    img: 'https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
     tag: 'Fastest',
     tagClass: 'tag-blue',
     title: 'Bike Taxi',
@@ -35,7 +35,7 @@ const services = [
     startFrom: '₹23',
   },
   {
-    img: 'https://images.pexels.com/photos/5794231/pexels-photo-5794231.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    img: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=900&h=600&q=80&auto=format&fit=crop',
     tag: 'Instant',
     tagClass: 'tag-green',
     title: 'Ping — Instant Ride',

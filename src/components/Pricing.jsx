@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import { IndianRupee, Check, Info } from 'lucide-react'
+import { IndianRupee, Check, Info, Bus, Car, Users } from 'lucide-react'
 import './Pricing.css'
 
 const plans = [
   {
-    icon: '🛺',
+    Icon: Bus,
     name: 'Auto',
     tagline: 'Budget rides',
     base: 80,
@@ -16,7 +16,7 @@ const plans = [
     popular: false,
   },
   {
-    icon: '🚙',
+    Icon: Car,
     name: 'Sedan',
     tagline: 'Most recommended',
     base: 100,
@@ -28,7 +28,7 @@ const plans = [
     popular: true,
   },
   {
-    icon: '🚐',
+    Icon: Users,
     name: 'SUV',
     tagline: 'Group rides',
     base: 150,
@@ -74,6 +74,9 @@ export default function Pricing() {
                 <div className="pricing__pop-label">Recommended</div>
               )}
               <div className="pricing__top">
+                <div className={`pricing__icon pricing__icon--${p.color}`}>
+                  <p.Icon size={22} strokeWidth={2.2} />
+                </div>
                 <div className="pricing__tagline">{p.tagline}</div>
                 <h3 className="pricing__name">{p.name}</h3>
                 <div className="pricing__amount">

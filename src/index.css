@@ -1,64 +1,80 @@
 :root {
-  /* Customer app exact colors */
-  --purple: #8B5CF6;
-  --purple-dark: #7C3AED;
-  --purple-mid: #6D28D9;
-  --purple-light: #EDE9FE;
-  --purple-subtle: #F5F3FF;
+  /* Brand — deep violet + taxi amber */
+  --ink: #0B1220;
+  --ink-soft: #1A2333;
+  --violet: #5B21B6;
+  --violet-deep: #4C1D95;
+  --violet-mid: #6D28D9;
+  --violet-soft: #EDE9FE;
+  --violet-mist: #F3EEFF;
+  --amber: #F5B301;
+  --amber-deep: #D97706;
+  --amber-soft: #FFF6D6;
+  --mint: #0D9488;
+  --mint-soft: #CCFBF1;
+  --sky: #0284C7;
+  --sky-soft: #E0F2FE;
 
-  --blue: #2196F3;
-  --blue-dark: #1976D2;
-  --blue-deeper: #1565C0;
-  --blue-light: #E3F2FD;
-
-  --yellow: #F59E0B;
-  --yellow-dark: #D97706;
-  --yellow-light: #FEF3C7;
-
-  --green: #10B981;
-  --green-light: #D1FAE5;
-  --red: #EF4444;
-
-  /* Light theme backgrounds */
-  --bg: #FFFFFF;
-  --bg-alt: #F8FAFC;
-  --bg-card: #FFFFFF;
-  --bg-blue-soft: #F0F9FF;
-  --bg-purple-soft: #F5F3FF;
-  --bg-yellow-soft: #FFFBEB;
+  /* Surfaces */
+  --bg: #F7F8FA;
+  --bg-elevated: #FFFFFF;
+  --bg-alt: #EEF1F6;
+  --bg-tint: #F3EEFF;
 
   /* Text */
-  --text: #1E293B;
-  --text-secondary: #64748B;
+  --text: #0F172A;
+  --text-secondary: #475569;
   --text-muted: #94A3B8;
-  --text-on-purple: #FFFFFF;
+  --text-on-dark: #F8FAFC;
 
-  /* Borders */
+  /* Lines & elevation */
   --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 16px 40px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 28px 64px rgba(15, 23, 42, 0.14);
+  --shadow-glow: 0 12px 40px rgba(91, 33, 182, 0.28);
+
+  --grad-brand: linear-gradient(135deg, #4C1D95 0%, #6D28D9 55%, #0284C7 100%);
+  --grad-amber: linear-gradient(135deg, #F5B301 0%, #F59E0B 100%);
+  --grad-dark: linear-gradient(160deg, #0B1220 0%, #1E1B4B 55%, #312E81 100%);
+
+  /* Compat aliases used across existing CSS */
+  --purple: var(--violet-mid);
+  --purple-dark: var(--violet-deep);
+  --purple-mid: var(--violet);
+  --purple-light: var(--violet-soft);
+  --purple-subtle: var(--violet-mist);
+  --blue: var(--sky);
+  --blue-dark: #0369A1;
+  --blue-deeper: #075985;
+  --blue-light: var(--sky-soft);
+  --yellow: var(--amber);
+  --yellow-dark: var(--amber-deep);
+  --yellow-light: var(--amber-soft);
+  --green: var(--mint);
+  --green-light: var(--mint-soft);
+  --red: #EF4444;
+  --bg-card: var(--bg-elevated);
+  --bg-blue-soft: var(--sky-soft);
+  --bg-purple-soft: var(--violet-mist);
+  --bg-yellow-soft: var(--amber-soft);
+  --text-on-purple: #fff;
   --border-light: #F1F5F9;
+  --shadow-purple: var(--shadow-glow);
+  --shadow-blue: 0 12px 32px rgba(2, 132, 199, 0.25);
+  --grad-purple: linear-gradient(135deg, #5B21B6 0%, #6D28D9 100%);
+  --grad-blue: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+  --grad-hero: var(--grad-brand);
+  --grad-yellow: var(--grad-amber);
 
-  /* Shadows */
-  --shadow-xs: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-  --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-  --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
-  --shadow-purple: 0 8px 25px rgba(139, 92, 246, 0.3);
-  --shadow-blue: 0 8px 25px rgba(33, 150, 243, 0.3);
+  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-display: 'Syne', system-ui, sans-serif;
 
-  /* Gradients */
-  --grad-purple: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
-  --grad-blue: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);
-  --grad-hero: linear-gradient(135deg, #6D28D9 0%, #8B5CF6 50%, #2196F3 100%);
-  --grad-yellow: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-
-  /* Fonts */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
-
-  /* Radius */
-  --r-sm: 8px;
-  --r-md: 12px;
-  --r-lg: 16px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 18px;
   --r-xl: 24px;
   --r-2xl: 32px;
   --r-full: 9999px;
@@ -79,7 +95,7 @@ body {
   font-family: var(--font-sans);
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -88,20 +104,19 @@ body {
   width: 100%;
   max-width: 100%;
   margin: 0;
-  border: none;
   min-height: 100vh;
 }
 
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; outline: none; font-family: var(--font-sans); }
-img { max-width: 100%; height: auto; }
+img { max-width: 100%; height: auto; display: block; }
 
 ::selection {
-  background: rgba(139,92,246,0.15);
-  color: var(--purple-dark);
+  background: rgba(91, 33, 182, 0.18);
+  color: var(--violet-deep);
 }
 
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-alt); }
-::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--purple); }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--violet-mid); }
