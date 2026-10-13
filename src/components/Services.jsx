@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import carImage from '../assets/car_image.jpeg'
+import autoRickshawImage from '../assets/auto_rickshaw_tamil_nadu.png'
+import bikeTaxiImage from '../assets/bike_taxi_tamil_nadu.png'
+import instantPingImage from '../assets/instant_ping_tamil_nadu.png'
 import './Services.css'
 
 const services = [
@@ -10,31 +13,31 @@ const services = [
     title: 'Car Rides',
     desc: 'AC sedans, SUVs and premium cars for city travel, airport drops, and outstation trips.',
     features: ['One Way & Round Trip', 'Airport Pickup / Drop', 'Outstation Available'],
-    startFrom: '₹100',
+    fare: '₹100 for first 3 km · then ₹20/km',
   },
   {
-    img: 'https://images.pexels.com/photos/1118448/pexels-photo-1118448.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: autoRickshawImage,
     tag: 'Best Value',
     title: 'Auto Rickshaw',
     desc: 'Quick, affordable autos for short distances within Tiruppur city. No bargaining, fixed fares.',
     features: ['Fixed Metered Fare', 'No Bargaining', 'Short City Rides'],
-    startFrom: '₹80',
+    fare: '₹80 for first 3 km · then ₹20/km',
   },
   {
-    img: 'https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop',
+    img: bikeTaxiImage,
     tag: 'Fastest',
     title: 'Bike Taxi',
     desc: 'Beat traffic with two-wheeler rides. Perfect for solo commuters who need speed.',
     features: ['2-Min Pickup', 'Beat Traffic', 'Helmet Provided'],
-    startFrom: '₹23',
+    fare: '₹23 for first 3 km · then ₹13/km',
   },
   {
-    img: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=900&h=600&q=80&auto=format&fit=crop',
+    img: instantPingImage,
     tag: 'Instant',
     title: 'Ping — Instant Ride',
     desc: 'One-tap booking. We match you with the nearest available vehicle in seconds. No waiting.',
     features: ['Nearest Driver', 'Any Vehicle Type', 'Real-Time Match'],
-    startFrom: '₹23',
+    fare: 'From ₹23 · see app for fare',
   },
 ]
 
@@ -79,7 +82,7 @@ export default function Services() {
                   ))}
                 </ul>
                 <div className="svc__foot">
-                  <span className="svc__from">From {s.startFrom}</span>
+                  <span className="svc__from">{s.fare}</span>
                   <a href="#download" className="svc__link">
                     Book now <ArrowRight size={15} />
                   </a>

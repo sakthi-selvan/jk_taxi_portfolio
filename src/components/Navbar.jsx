@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Phone, ArrowRight } from 'lucide-react'
 import './Navbar.css'
-import logoImg from '../assets/jk_taxi_logo_v2_c_1_us_4800_rbg.png'
+import logoImg from '../assets/jk_taxi_brush_logo_cropped.png'
 
 const LINKS = [
   { label: 'Services', href: '#services' },

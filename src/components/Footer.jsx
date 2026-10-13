@@ -70,7 +70,8 @@ export default function Footer() {
         <div className="footer__bottom">
           <p>&copy; 2026 JK Taxi · All rights reserved · Made in Tiruppur</p>
           <div className="footer__bottom-links">
-            <a href="#">Privacy Policy</a>
+            <a href="/delete-account">Delete account</a>
+            <a href="mailto:support@jktaxi.in?subject=Privacy%20policy%20request">Privacy Policy</a>
             <a href="#">Terms of Service</a>
             <a href="#">Cancellation Policy</a>
           </div>

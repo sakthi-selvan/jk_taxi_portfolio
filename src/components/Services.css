@@ -90,9 +90,10 @@
 }
 .svc__from {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 0.98rem;
   font-weight: 700;
   color: var(--ink);
+  line-height: 1.45;
 }
 .svc__link {
   display: inline-flex;

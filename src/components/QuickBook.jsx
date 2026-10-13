@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Car, Bus, Bike, Zap, ArrowRight } from 'lucide-react'
+import { Car, Bus, Bike, Zap } from 'lucide-react'
 import './QuickBook.css'
 
 const VEHS = [
-  { id: 'car', Icon: Car, label: 'Car', sub: 'Mini · Sedan · SUV', price: 'From ₹100' },
-  { id: 'auto', Icon: Bus, label: 'Auto', sub: 'Auto Rickshaw', price: 'From ₹80' },
-  { id: 'bike', Icon: Bike, label: 'Bike', sub: 'Two-Wheeler Taxi', price: 'From ₹23' },
+  { id: 'car', Icon: Car, label: 'Car', sub: 'Mini · Sedan · SUV', price: '₹100 / 3 km · then ₹20/km' },
+  { id: 'auto', Icon: Bus, label: 'Auto', sub: 'Auto Rickshaw', price: '₹80 / 3 km · then ₹20/km' },
+  { id: 'bike', Icon: Bike, sub: 'Two-Wheeler Taxi', label: 'Bike', price: '₹23 / 3 km · then ₹13/km' },
   { id: 'ping', Icon: Zap, label: 'Ping', sub: 'Nearest Available', price: 'Instant' },
 ]
 
@@ -46,26 +46,6 @@ export default function QuickBook() {
             ))}
           </div>
 
-          <div className="qb-route">
-            <div className="qb-field">
-              <span className="qb-dot qb-dot--go" />
-              <div>
-                <label>Pickup</label>
-                <span>Your current location, Tiruppur</span>
-              </div>
-            </div>
-            <div className="qb-field">
-              <span className="qb-dot qb-dot--drop" />
-              <div>
-                <label>Drop-off</label>
-                <span className="qb-placeholder">Where are you going?</span>
-              </div>
-            </div>
-            <a href="#download" className="qb-cta">
-              Find a Ride
-              <ArrowRight size={18} strokeWidth={2.5} />
-            </a>
-          </div>
         </motion.div>
       </div>
     </section>

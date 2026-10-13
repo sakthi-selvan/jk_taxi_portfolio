@@ -72,9 +72,11 @@
   text-align: center;
 }
 .qb-tab-price {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 800;
   color: var(--amber-deep);
+  line-height: 1.35;
+  text-align: center;
 }
 
 .qb-route {

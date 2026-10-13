@@ -1,6 +1,5 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import QuickBook from './components/QuickBook'
 import Services from './components/Services'
 import Fleet from './components/Fleet'
 import HowItWorks from './components/HowItWorks'
@@ -9,14 +8,18 @@ import Pricing from './components/Pricing'
 import Testimonials from './components/Testimonials'
 import Download from './components/Download'
 import Footer from './components/Footer'
+import AccountDeletion from './AccountDeletion'
 import './App.css'
 
 function App() {
+  if (window.location.pathname.replace(/\/+$/, '') === '/delete-account') {
+    return <AccountDeletion />
+  }
+
   return (
     <div className="app">
       <Navbar />
       <Hero />
-      <QuickBook />
       <Services />
       <Fleet />
       <HowItWorks />

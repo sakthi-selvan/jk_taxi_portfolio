@@ -1,0 +1,168 @@
+.deletion-page {
+  min-height: 100vh;
+  padding: 0 24px 28px;
+  background:
+    radial-gradient(900px 460px at 0% 0%, rgba(245, 166, 35, 0.12), transparent 60%),
+    radial-gradient(900px 520px at 100% 5%, rgba(29, 78, 216, 0.08), transparent 58%),
+    var(--mist);
+}
+
+.deletion-header {
+  max-width: 1040px;
+  min-height: 86px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.deletion-brand,
+.deletion-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.deletion-brand {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.deletion-brand__mark {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--grad-amber);
+  font-size: 0.9rem;
+}
+
+.deletion-back {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.deletion-back:hover,
+.deletion-section a:not(.deletion-button):hover { color: var(--amber-deep); }
+
+.deletion-card {
+  max-width: 760px;
+  margin: 28px auto 38px;
+  padding: clamp(28px, 6vw, 58px);
+  border: 1px solid rgba(215, 220, 229, 0.85);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-md);
+}
+
+.deletion-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 22px;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--amber-soft);
+  color: #9A5D00;
+}
+
+.deletion-eyebrow {
+  margin-bottom: 8px;
+  color: var(--amber-deep);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.deletion-card h1 {
+  max-width: 15ch;
+  margin-bottom: 14px;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.deletion-intro,
+.deletion-section p,
+.deletion-section li {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.deletion-intro { max-width: 59ch; }
+
+.deletion-section {
+  margin-top: 36px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.deletion-section h2 {
+  margin-bottom: 14px;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.deletion-section ol {
+  display: grid;
+  gap: 10px;
+  padding-left: 22px;
+}
+
+.deletion-section li { padding-left: 4px; }
+.deletion-section strong { color: var(--ink-2); }
+.deletion-section a:not(.deletion-button) { color: #94600E; text-decoration: underline; text-underline-offset: 3px; }
+.deletion-section p + p { margin-top: 12px; }
+
+.deletion-button {
+  display: inline-flex;
+  min-height: 50px;
+  margin-top: 22px;
+  padding: 0 21px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 999px;
+  background: var(--ink);
+  box-shadow: var(--shadow-sm);
+  color: #fff;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.deletion-button:hover { transform: translateY(-2px); background: #1C2230; }
+.deletion-note { margin-top: 12px; font-size: 0.88rem !important; }
+
+.deletion-privacy {
+  display: flex;
+  margin-top: 32px;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 11px;
+  border-radius: 14px;
+  background: #F4F7FB;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.deletion-privacy svg { flex: 0 0 auto; margin-top: 2px; color: var(--teal); }
+.deletion-footer { color: var(--text-muted); font-size: 0.82rem; text-align: center; }
+
+@media (max-width: 540px) {
+  .deletion-page { padding: 0 16px 22px; }
+  .deletion-header { min-height: 72px; }
+  .deletion-back { gap: 6px; font-size: 0.82rem; }
+  .deletion-card { margin: 20px auto 28px; border-radius: 18px; }
+  .deletion-button { width: 100%; }
+}

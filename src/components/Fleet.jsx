@@ -3,6 +3,8 @@ import { Users, IndianRupee } from 'lucide-react'
 import miniCar from '../assets/mini_car.jpeg'
 import carImage from '../assets/car_image.jpeg'
 import suvErtica from '../assets/suv_ertica.png'
+import autoRickshawImage from '../assets/auto_rickshaw_tamil_nadu.png'
+import bikeTaxiImage from '../assets/bike_taxi_tamil_nadu.png'
 import './Fleet.css'
 
 const vehicles = [
@@ -32,22 +34,22 @@ const vehicles = [
     type: 'SUV / MUV',
     seats: 7,
     base: 150,
-    perKm: 25,
+    perKm: 20,
     examples: 'Ertiga · Innova · Marazzo',
     popular: false,
   },
   {
-    img: 'https://images.pexels.com/photos/1118448/pexels-photo-1118448.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop',
+    img: autoRickshawImage,
     name: 'Auto',
     type: 'Auto Rickshaw',
     seats: 3,
     base: 80,
-    perKm: 21,
+    perKm: 20,
     examples: 'Bajaj RE · Piaggio Ape',
     popular: false,
   },
   {
-    img: 'https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop',
+    img: bikeTaxiImage,
     name: 'Bike',
     type: 'Two-Wheeler',
     seats: 1,
@@ -106,7 +108,7 @@ export default function Fleet() {
                   <div className="fleet__price-item">
                     <IndianRupee size={13} />
                     <span className="fleet__price-val">{v.base}</span>
-                    <span className="fleet__price-lbl">base</span>
+                    <span className="fleet__price-lbl">first 3 km</span>
                   </div>
                   <span className="fleet__price-sep">+</span>
                   <div className="fleet__price-item">
@@ -115,6 +117,7 @@ export default function Fleet() {
                     <span className="fleet__price-lbl">/km</span>
                   </div>
                 </div>
+                <p className="fleet__fare-note">Then ₹{v.perKm} per additional km</p>
                 <p className="fleet__examples">{v.examples}</p>
               </div>
             </motion.article>
