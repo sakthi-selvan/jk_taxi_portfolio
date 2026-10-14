@@ -57,7 +57,7 @@ export default function Hero() {
             Download App &amp; Book
             <ArrowRight size={17} strokeWidth={2.5} />
           </a>
-          <a href="tel:+9104214433435" className="hr-cta-call">
+          <a href="tel:04214433435" className="hr-cta-call">
             <Phone size={15} strokeWidth={2.5} />
             Call 0421 4433435
           </a>
