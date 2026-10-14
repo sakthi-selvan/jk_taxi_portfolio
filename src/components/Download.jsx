@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Check, Smartphone } from 'lucide-react'
+import { Check, Smartphone } from 'lucide-react'
+import appView from '../assets/app_view.png'
 import './Download.css'
 
 export default function Download() {
@@ -54,7 +55,7 @@ export default function Download() {
                   </div>
                 </a>
 
-                <a href="#" className="dl__store-btn">
+                <a href="https://play.google.com/apps/testing/com.jktaxi.customer" className="dl__store-btn" target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 24 24" className="dl__store-icon" fill="currentColor">
                     <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z"/>
                   </svg>
@@ -75,42 +76,7 @@ export default function Download() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="dl__phone">
-                <div className="dl__phone-screen">
-                  <div className="dl__app-top">
-                    <div className="dl__app-logo">JK</div>
-                    <span>JK Taxi</span>
-                    <div className="dl__online-dot" />
-                  </div>
-
-                  <div className="dl__app-map">
-                    <img
-                      src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=300&q=60&auto=format&fit=crop"
-                      alt="map"
-                    />
-                    <div className="dl__map-pin">
-                      <div className="dl__map-pin-dot" />
-                    </div>
-                  </div>
-
-                  <div className="dl__app-bottom">
-                    <p className="dl__app-where">Where to?</p>
-                    <div className="dl__app-input">
-                      <div className="dl__app-dot green" />
-                      <span>Your location</span>
-                    </div>
-                    <div className="dl__app-input">
-                      <div className="dl__app-dot purple" />
-                      <span>Enter destination…</span>
-                    </div>
-                    <div className="dl__app-ride-types">
-                      {['Car', 'Auto', 'Bike'].map(t => (
-                        <div className={`dl__app-type ${t === 'Car' ? 'active' : ''}`} key={t}>{t}</div>
-                      ))}
-                    </div>
-                    <div className="dl__app-cta">Book Ride <ArrowRight size={14} /></div>
-                  </div>
-                </div>
-                <div className="dl__phone-glow" />
+                <img src={appView} alt="JK Taxi app on a phone, showing the ride map and vehicle booking options" className="dl__app-view" loading="lazy" />
               </div>
             </motion.div>
           </div>
