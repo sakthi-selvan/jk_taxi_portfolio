@@ -40,7 +40,7 @@
   white-space: nowrap;
   padding: 6px 14px;
   background: var(--grad-amber);
-  color: var(--ink);
+  color: #fff;
   font-size: 0.72rem;
   font-weight: 800;
   border-radius: var(--r-full);
@@ -156,7 +156,7 @@
 }
 .pricing__btn--yellow {
   background: var(--grad-amber);
-  color: var(--ink);
+  color: #fff;
   box-shadow: var(--shadow-glow);
 }
 

@@ -92,14 +92,14 @@
 
 .btn-purple,
 .btn-blue {
-  background: var(--ink);
+  background: var(--grad-brand);
   color: #fff;
   box-shadow: var(--shadow-sm);
 }
 .btn-purple:hover,
 .btn-blue:hover {
   transform: translateY(-2px);
-  background: #1C2230;
+  background: var(--purple-dark);
 }
 .btn-outline-purple {
   background: transparent;

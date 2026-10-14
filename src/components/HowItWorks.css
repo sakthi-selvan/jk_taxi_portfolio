@@ -89,7 +89,7 @@
 }
 .hiw__banner-btn {
   background: var(--grad-amber);
-  color: var(--ink);
+  color: #fff;
   box-shadow: var(--shadow-glow);
 }
 

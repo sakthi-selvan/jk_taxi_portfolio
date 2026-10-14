@@ -1,34 +1,34 @@
 :root {
-  /* Warm-trust taxi system: ink + amber + soft mist (not purple SaaS) */
-  --ink: #12151C;
-  --ink-2: #2A3040;
-  --mist: #EEF1F5;
+  /* JK Taxi brand kit: deep violet, clear neutrals, and confident teal. */
+  --ink: #1A1B2E;
+  --ink-2: #34364C;
+  --mist: #F7F7FB;
   --paper: #FFFFFF;
-  --line: #D7DCE5;
-  --amber: #F5A623;
-  --amber-deep: #D4890F;
-  --amber-soft: #FFF4DE;
-  --teal: #0F766E;
+  --line: #E8E9F0;
+  --amber: #2C0267;
+  --amber-deep: #240154;
+  --amber-soft: #F3F4F8;
+  --teal: #0D9488;
   --teal-soft: #CCFBF1;
-  --sky: #1D4ED8;
+  --sky: #2563EB;
   --sky-soft: #DBEAFE;
 
   --text: var(--ink);
-  --text-secondary: #5B6475;
-  --text-muted: #8B93A7;
+  --text-secondary: #5B6178;
+  --text-muted: #8B90A5;
   --text-on-dark: #F7F8FA;
 
   --bg: var(--mist);
   --bg-elevated: var(--paper);
-  --bg-alt: #E6EAF0;
+  --bg-alt: #F3F4F8;
   --bg-tint: var(--amber-soft);
 
   /* Compat aliases for existing class names */
-  --purple: #1D4ED8;
-  --purple-dark: #1E3A8A;
-  --purple-mid: #2563EB;
-  --purple-light: var(--sky-soft);
-  --purple-subtle: #EFF4FF;
+  --purple: #2C0267;
+  --purple-dark: #240154;
+  --purple-mid: #4B1A8C;
+  --purple-light: var(--amber-soft);
+  --purple-subtle: #F3F4F8;
   --blue: var(--sky);
   --blue-dark: #1E40AF;
   --blue-deeper: #1E3A8A;
@@ -45,34 +45,34 @@
   --bg-yellow-soft: var(--amber-soft);
   --text-on-purple: #fff;
   --border: var(--line);
-  --border-light: #E9EDF3;
-  --border-strong: #C5CCD8;
+  --border-light: #E8E9F0;
+  --border-strong: #D1D5E0;
 
-  --shadow-xs: 0 1px 2px rgba(18, 21, 28, 0.04);
-  --shadow-sm: 0 10px 30px rgba(18, 21, 28, 0.06);
-  --shadow-md: 0 18px 48px rgba(18, 21, 28, 0.1);
-  --shadow-lg: 0 28px 70px rgba(18, 21, 28, 0.14);
-  --shadow-glow: 0 14px 36px rgba(245, 166, 35, 0.35);
+  --shadow-xs: 0 1px 2px rgba(26, 27, 46, 0.04);
+  --shadow-sm: 0 10px 30px rgba(26, 27, 46, 0.06);
+  --shadow-md: 0 18px 48px rgba(26, 27, 46, 0.1);
+  --shadow-lg: 0 28px 70px rgba(26, 27, 46, 0.12);
+  --shadow-glow: 0 14px 36px rgba(44, 2, 103, 0.22);
   --shadow-purple: var(--shadow-glow);
   --shadow-blue: 0 12px 32px rgba(29, 78, 216, 0.22);
 
-  --grad-brand: linear-gradient(135deg, #F5A623 0%, #F59E0B 100%);
+  --grad-brand: linear-gradient(135deg, #2C0267 0%, #4B1A8C 100%);
   --grad-amber: var(--grad-brand);
-  --grad-purple: linear-gradient(135deg, #1D4ED8 0%, #1E40AF 100%);
+  --grad-purple: linear-gradient(135deg, #2C0267 0%, #240154 100%);
   --grad-blue: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
   --grad-yellow: var(--grad-brand);
   --grad-hero: linear-gradient(180deg, rgba(18,21,28,0.45) 0%, rgba(18,21,28,0.25) 40%, rgba(18,21,28,0.78) 100%);
   --grad-dark: linear-gradient(160deg, #12151C 0%, #1C2433 100%);
 
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --font-sans: 'Source Sans 3', system-ui, sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --font-sans: 'Inter', sans-serif;
 
   /* Legacy aliases used by sections */
-  --violet: #1D4ED8;
-  --violet-deep: #1E3A8A;
-  --violet-mid: #2563EB;
-  --violet-mist: #EFF4FF;
-  --mint: #0F766E;
+  --violet: #2C0267;
+  --violet-deep: #240154;
+  --violet-mid: #4B1A8C;
+  --violet-mist: #F3F4F8;
+  --mint: #0D9488;
   --mint-soft: #CCFBF1;
 
   --r-sm: 10px;
@@ -93,8 +93,8 @@ html {
 body {
   font-family: var(--font-sans);
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(245, 166, 35, 0.08), transparent 55%),
-    radial-gradient(900px 500px at 100% 0%, rgba(29, 78, 216, 0.06), transparent 50%),
+    radial-gradient(1200px 600px at 10% -10%, rgba(44, 2, 103, 0.06), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(37, 99, 235, 0.05), transparent 50%),
     var(--mist);
   color: var(--text);
   line-height: 1.65;
@@ -110,7 +110,7 @@ button { cursor: pointer; border: none; outline: none; font-family: var(--font-s
 img { max-width: 100%; height: auto; display: block; }
 
 ::selection {
-  background: rgba(245, 166, 35, 0.28);
+  background: rgba(44, 2, 103, 0.18);
   color: var(--ink);
 }
 

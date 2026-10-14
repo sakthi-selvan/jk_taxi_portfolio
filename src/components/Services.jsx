@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-import carImage from '../assets/car_image.jpeg'
-import autoRickshawImage from '../assets/auto_rickshaw_tamil_nadu.png'
-import bikeTaxiImage from '../assets/bike_taxi_tamil_nadu.png'
+import carImage from '../assets/sedan.png'
+import autoRickshawImage from '../assets/auto.png'
+import bikeTaxiImage from '../assets/bike.png'
 import instantPingImage from '../assets/instant_ping_tamil_nadu.png'
 import './Services.css'
 
@@ -13,7 +13,7 @@ const services = [
     title: 'Car Rides',
     desc: 'AC sedans, SUVs and premium cars for city travel, airport drops, and outstation trips.',
     features: ['One Way & Round Trip', 'Airport Pickup / Drop', 'Outstation Available'],
-    fare: '₹100 for first 3 km · then ₹20/km',
+    fare: 'Mini/Sedan ₹100 + ₹20/km · SUV ₹150 + ₹25/km',
   },
   {
     img: autoRickshawImage,

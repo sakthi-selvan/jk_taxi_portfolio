@@ -21,7 +21,7 @@
 .svc__media {
   border-radius: 20px;
   overflow: hidden;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 3 / 2;
   background: var(--bg-alt);
 }
 .svc__media img {

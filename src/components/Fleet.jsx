@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 import { Users, IndianRupee } from 'lucide-react'
-import miniCar from '../assets/mini_car.jpeg'
-import carImage from '../assets/car_image.jpeg'
-import suvErtica from '../assets/suv_ertica.png'
-import autoRickshawImage from '../assets/auto_rickshaw_tamil_nadu.png'
-import bikeTaxiImage from '../assets/bike_taxi_tamil_nadu.png'
+import miniCar from '../assets/mini.png'
+import carImage from '../assets/sedan.png'
+import suvErtica from '../assets/suv.png'
+import autoRickshawImage from '../assets/auto.png'
+import bikeTaxiImage from '../assets/bike.png'
 import './Fleet.css'
 
 const vehicles = [
@@ -34,7 +34,7 @@ const vehicles = [
     type: 'SUV / MUV',
     seats: 7,
     base: 150,
-    perKm: 20,
+    perKm: 25,
     examples: 'Ertiga · Innova · Marazzo',
     popular: false,
   },
@@ -90,11 +90,11 @@ export default function Fleet() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.06, duration: 0.4 }}
             >
-              {v.popular && <span className="fleet__badge">Most Popular</span>}
-              <div className="fleet__img-wrap">
+              <div className={`fleet__img-wrap fleet__img-wrap--${v.name.toLowerCase()}`}>
                 <img src={v.img} alt={v.name} loading="lazy" />
               </div>
               <div className="fleet__info">
+                {v.popular && <span className="fleet__badge">Most Popular</span>}
                 <div className="fleet__name-row">
                   <div>
                     <h3 className="fleet__name">{v.name}</h3>
@@ -106,18 +106,14 @@ export default function Fleet() {
                 </div>
                 <div className="fleet__pricing">
                   <div className="fleet__price-item">
-                    <IndianRupee size={13} />
-                    <span className="fleet__price-val">{v.base}</span>
-                    <span className="fleet__price-lbl">first 3 km</span>
+                    <span className="fleet__price-lbl">First 3 km</span>
+                    <span className="fleet__price-val"><IndianRupee size={14} />{v.base}</span>
                   </div>
-                  <span className="fleet__price-sep">+</span>
                   <div className="fleet__price-item">
-                    <IndianRupee size={13} />
-                    <span className="fleet__price-val">{v.perKm}</span>
-                    <span className="fleet__price-lbl">/km</span>
+                    <span className="fleet__price-lbl">Each additional km</span>
+                    <span className="fleet__price-val"><IndianRupee size={14} />{v.perKm}</span>
                   </div>
                 </div>
-                <p className="fleet__fare-note">Then ₹{v.perKm} per additional km</p>
                 <p className="fleet__examples">{v.examples}</p>
               </div>
             </motion.article>

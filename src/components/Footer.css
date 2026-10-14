@@ -17,24 +17,9 @@
   margin-bottom: 16px;
 }
 .footer__logo-mark {
-  width: 42px;
-  height: 42px;
-  background: var(--grad-amber);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.95rem;
-  color: var(--ink);
-}
-.footer__logo-text {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -0.02em;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
 }
 .footer__tagline {
   font-size: 0.95rem;

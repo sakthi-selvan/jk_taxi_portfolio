@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 import './Footer.css'
+import logoImg from '../assets/logo.png'
 
 export default function Footer() {
   return (
@@ -9,8 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer__brand">
             <div className="footer__logo">
-              <span className="footer__logo-mark">JK</span>
-              <span className="footer__logo-text">Taxi</span>
+              <img src={logoImg} alt="JK Taxi" className="footer__logo-mark" />
             </div>
             <p className="footer__tagline">
               Our cities trusted ride-booking platform. Safe, affordable, and always on time.

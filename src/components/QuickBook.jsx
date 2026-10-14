@@ -4,7 +4,7 @@ import { Car, Bus, Bike, Zap } from 'lucide-react'
 import './QuickBook.css'
 
 const VEHS = [
-  { id: 'car', Icon: Car, label: 'Car', sub: 'Mini · Sedan · SUV', price: '₹100 / 3 km · then ₹20/km' },
+  { id: 'car', Icon: Car, label: 'Car', sub: 'Mini · Sedan · SUV', price: 'Mini/Sedan ₹100 + ₹20/km · SUV ₹150 + ₹25/km' },
   { id: 'auto', Icon: Bus, label: 'Auto', sub: 'Auto Rickshaw', price: '₹80 / 3 km · then ₹20/km' },
   { id: 'bike', Icon: Bike, sub: 'Two-Wheeler Taxi', label: 'Bike', price: '₹23 / 3 km · then ₹13/km' },
   { id: 'ping', Icon: Zap, label: 'Ping', sub: 'Nearest Available', price: 'Instant' },

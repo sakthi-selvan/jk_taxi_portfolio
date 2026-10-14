@@ -33,8 +33,8 @@
   height: 48px;
 }
 .nb-logo-img {
-  height: 48px;
-  width: auto;
+  width: 54px;
+  height: 54px;
   object-fit: contain;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25));
   transition: filter 0.25s;
@@ -92,7 +92,7 @@
   padding: 12px 22px;
   border-radius: 999px;
   background: var(--grad-amber);
-  color: var(--ink);
+  color: #fff;
   font-size: 0.9rem;
   font-weight: 800;
   text-decoration: none;
@@ -102,7 +102,7 @@
 }
 .nb-book:hover {
   transform: translateY(-1px);
-  box-shadow: 0 14px 32px rgba(245, 166, 35, 0.45);
+  box-shadow: 0 14px 32px rgba(44, 2, 103, 0.32);
 }
 
 .nb-ham {
@@ -213,7 +213,7 @@
   padding: 15px;
   border-radius: 14px;
   background: var(--grad-amber);
-  color: var(--ink);
+  color: #fff;
   font-weight: 800;
   text-decoration: none;
   box-shadow: var(--shadow-glow);
